@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import hero from "./assets/home/desktop/image-hero.jpg";
+import herodesktop from "./assets/home/desktop/image-hero.jpg";
+import herotablet from "./assets/home/tablet/image-header.jpg";
+import heromobile from "./assets/home/mobile/image-header.jpg";
 import Menu from "./components/Menu.jsx";
 import Shared from "./components/Shared.jsx";
 import imageSpeakerDesktop from "./assets/home/desktop/image-speaker-zx9.png";
@@ -24,7 +26,12 @@ function App() {
   return (
     <>
       <header className=" bg-cover bg-center w-full h-[500px] flex flex-col justify-center items-center">
-        <img src={hero} alt="hero" className="w-full relative" />
+        <picture>
+          <source srcSet={herodesktop} media="(min-width: 1024px)" />
+          <source srcSet={herotablet} media="(min-width: 768px)" />
+          <img src={heromobile} alt="hero" className="w-full relative" />
+        </picture>
+        {/* <img src={hero} alt="hero" className="w-full relative" /> */}
         <div className="text-gray-100 absolute mx-4 justify-center items-center text-center lg:text-left lg:top-48 lg:left-32 lg:w-[30%] py-4">
           <h5 className=" text-[9px] text-gray-400 tracking-widest mb-4">
             NEW PRODUCT
