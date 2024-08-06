@@ -23,8 +23,8 @@ function App() {
   // }, []);
   return (
     <>
-      <header className="bg-[url(./images/home/mobile/image-header.jpg)] md:bg-[url(./images/home/tablet/image-header.jpg)] lg:bg-[url(./images/home/desktop/image-hero.jpg)]  bg-cover bg-center w-full h-[500px] flex flex-col justify-center items-center">
-        {/* <img src={hero} alt="hero" className="w-full relative" /> */}
+      <header className=" bg-cover bg-center w-full h-[500px] flex flex-col justify-center items-center">
+        <img src={hero} alt="hero" className="w-full relative" />
         <div className="text-gray-100 absolute mx-4 justify-center items-center text-center lg:text-left lg:top-48 lg:left-32 lg:w-[30%] py-4">
           <h5 className=" text-[9px] text-gray-400 tracking-widest mb-4">
             NEW PRODUCT
