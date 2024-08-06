@@ -25,7 +25,7 @@ function App() {
   // }, []);
   return (
     <>
-      <header className=" bg-cover bg-center w-full h-[500px] flex flex-col justify-center items-center">
+      <header className=" bg-cover bg-center w-full h-full lg:h-[500px] flex flex-col justify-center items-center">
         <picture>
           <source srcSet={herodesktop} media="(min-width: 1024px)" />
           <source srcSet={herotablet} media="(min-width: 768px)" />
