@@ -15,7 +15,7 @@ const Navbar = () => {
     textDecoration: "underline",
   };
   return (
-    <nav className=" bg-[#1a1919] px-8 lg:px-32 py-4 text-gray-100">
+    <nav className=" bg-[#1a1919] px-32 lg:px-32 py-4 text-gray-100">
       <div className=" flex items-center justify-between gap-4 ">
         <div className=" flex flex-row-reverse items-center gap-16 lg:gap-0 lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           <h2 className="text-2xl font-bold">audiophile</h2>
