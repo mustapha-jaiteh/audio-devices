@@ -78,6 +78,7 @@ const HeadphoneDetails = () => {
               {headphone.name}
             </h3>
             <p className="mb-4 text-sm">{headphone.description}</p>
+            <p className="price font-bold">{`$${headphone.price}`}</p>
             <div className="flex justify-center items-center gap-4">
               <button className="bg-gray-300 hover:bg-gray-400 text-black text-sm font-bold p-2 rounded-sm mt-4 left-0 w-24 cursor-pointer ">
                 {cartItems}

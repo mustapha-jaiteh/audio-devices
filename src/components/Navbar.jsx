@@ -2,9 +2,19 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import Cart from "./Cart";
 
 const Navbar = () => {
   const [navVisible, setNavVisible] = useState(false);
+  const [cartVisible, setCartVisible] = useState(false);
+
+  const cartOpen = () => {
+    setCartVisible(true);
+  };
+  const cartClose = () => {
+    setCartVisible(false);
+  };
+
   const toggleNav = () => {
     setNavVisible(!navVisible);
   };
@@ -76,9 +86,10 @@ const Navbar = () => {
           )}
         </div>
         <div className="flex items-center">
-          <p className="text-md">
+          <p className="text-md" onClick={cartOpen}>
             <FaShoppingCart />
           </p>
+          {cartVisible ? <Cart cartClose={cartClose} /> : null}
         </div>
       </div>
       <div className="-bottom-1 h-px left-0 right-0 bg-gray-200 mt-3"></div>
