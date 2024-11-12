@@ -8,6 +8,7 @@ import Speakers from "./pages/Speakers.jsx";
 import Earphones from "./pages/Earphones.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Headphones from "./pages/Headphones.jsx";
+import Checkout from "./pages/Checkout.jsx";
 import HeadphoneDetails, {
   headphoneDetailsLoader,
 } from "./pages/HeadphoneDetails.jsx";
@@ -17,6 +18,7 @@ import SpeakerDetails, {
 import EarphoneDetails, {
   earphoneDetailsLoader,
 } from "./pages/EarphoneDetails.jsx";
+import CartProvider from "./components/Provider.jsx";
 const router = createBrowserRouter([
   {
     element: <Layout />,
@@ -52,13 +54,19 @@ const router = createBrowserRouter([
         element: <EarphoneDetails />,
         loader: earphoneDetailsLoader,
       },
+      {
+        path: "/checkout",
+        element: <Checkout />,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
     {/* <App /> */}
   </React.StrictMode>
 );

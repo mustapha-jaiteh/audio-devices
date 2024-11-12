@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Shared from "../components/Shared";
 import Menu from "../components/Menu";
+// import { useProductContext } from "../components/Provider";
+import { CartContext } from "../components/Provider";
+import { useContext } from "react";
 
 export const headphoneDetailsLoader = async ({ params }) => {
   const response = await fetch("/data.json");
@@ -15,11 +18,14 @@ export const headphoneDetailsLoader = async ({ params }) => {
   return headphone;
 };
 
-const HeadphoneDetails = () => {
+const HeadphoneDetails = ({ product }) => {
   const headphone = useLoaderData();
+
+  const { addToCart } = useContext(CartContext);
+
   const [cartItems, setCartItems] = useState(0);
 
-  const addToCart = (id) => {
+  const addItems = (id) => {
     setCartItems(cartItems + 1);
   };
 
@@ -80,13 +86,16 @@ const HeadphoneDetails = () => {
             <p className="mb-4 text-sm">{headphone.description}</p>
             <p className="price font-bold">{`$${headphone.price}`}</p>
             <div className="flex justify-center items-center gap-4">
-              <button className="bg-gray-300 hover:bg-gray-400 text-black text-sm font-bold p-2 rounded-sm mt-4 left-0 w-24 cursor-pointer ">
+              <button
+                className="bg-gray-300 hover:bg-gray-400 text-black text-sm font-bold p-2 rounded-sm mt-4 left-0 w-24 cursor-pointer "
+                onClick={addItems}
+              >
                 {cartItems}
               </button>
 
               <button
                 className="bg-[#D87D4A] hover:bg-[#FBAF85] text-white text-sm p-2 rounded-sm mt-4 left-0 w-28 cursor-pointer"
-                onClick={addToCart}
+                onClick={() => addToCart(headphone)}
               >
                 ADD TO CART
               </button>

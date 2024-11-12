@@ -4,9 +4,12 @@ import Shared from "../components/Shared";
 // import data from "../services/data.json";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Cart from "../components/Cart";
+import HeadphoneDetails from "./HeadphoneDetails";
 
 const Headphones = () => {
   const [data, setData] = useState([]);
+
   useEffect(() => {
     async function fetchData() {
       try {

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams, useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import Shared from "../components/Shared";
 import Menu from "../components/Menu";
+import { CartContext } from "../components/Provider";
 
 export const speakerDetailsLoader = async ({ params }) => {
   const response = await fetch("/data.json");
@@ -17,9 +18,10 @@ export const speakerDetailsLoader = async ({ params }) => {
 };
 const SpeakerDetails = () => {
   const speaker = useLoaderData();
+  const { addToCart } = useContext(CartContext);
   const [cartItems, setCartItems] = useState(0);
 
-  const addToCart = (id) => {
+  const addCart = (id) => {
     setCartItems(cartItems + 1);
   };
 
@@ -70,7 +72,7 @@ const SpeakerDetails = () => {
 
               <button
                 className="bg-[#D87D4A] hover:bg-[#FBAF85] text-white text-sm p-2 rounded-sm mt-4 left-0 w-28 cursor-pointer"
-                onClick={addToCart}
+                onClick={() => addToCart(speaker)}
               >
                 ADD TO CART
               </button>

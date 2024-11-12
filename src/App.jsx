@@ -15,6 +15,10 @@ import imageSpeakerMobile from "./assets/home/mobile/image-speaker-zx9.png";
 import imageSpeakerMobile2 from "./assets/home/mobile/image-speaker-zx7.jpg";
 import imageEarphoneMobile from "./assets/home/mobile/image-earphones-yx1.jpg";
 import { Link } from "react-router-dom";
+// import CartProvider from "./components/Provider.jsx";
+// import HeadphoneDetails from "./pages/HeadphoneDetails.jsx";
+// import SpeakerDetails from "./pages/SpeakerDetails.jsx";
+// import EarphoneDetails from "./pages/EarphoneDetails.jsx";
 
 function App() {
   // const [menu, setMenu] = useState([]);
