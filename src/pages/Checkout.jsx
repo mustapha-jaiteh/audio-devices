@@ -23,7 +23,7 @@ const Checkout = () => {
     setThankyouPupUp(false);
   };
   return (
-    <div className="checkout-container bg-gray-200 h-full w-full p-16 grid grid-cols-1 lg:grid-cols-10 gap-8 ">
+    <div className="checkout-container bg-gray-200 h-full w-full p-4 lg:p-16 grid grid-cols-1 lg:grid-cols-10 gap-8 ">
       <form
         action="#"
         method="post"
