@@ -29,7 +29,7 @@ function App() {
   // }, []);
   return (
     <>
-      <header className=" bg-cover bg-center w-full h-full lg:h-[500px] flex flex-col justify-center items-center">
+      <header className=" bg-cover bg-center h-full lg:h-[500px] flex flex-col justify-center items-center">
         <picture>
           <source srcSet={herodesktop} media="(min-width: 1024px)" />
           <source srcSet={herotablet} media="(min-width: 768px)" />
@@ -97,6 +97,7 @@ function App() {
             <h3 className="text-2xl mb-4 text-gray-900 tracking-wid font-semibold">
               ZX7 SPEAKER
             </h3>
+
             <Link to={"/speakers"}>
               <button className=" hover:bg-[#000000] text-black hover:text-gray-100 font-bold p-2 rounded mt-4 left-0 w-32 border-2 border-black">
                 See Product
