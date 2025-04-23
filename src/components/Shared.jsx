@@ -7,11 +7,11 @@ const Shared = () => {
   return (
     <div className="shared flex flex-col-reverse lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  my-auto  mx-8 lg:gap-4 items-center  justify-center h-[700px] lg:h-full lg:mx-28 rounded-md ">
       <div className=" w-full h-full rounded-sm px-4 lg:pr-12 flex flex-col justify-center items-center lg:items-left text-center md:text-center lg:text-left lg:top-48 lg:left-32 lg:w-full text-gray-900">
-        <h3 className="text-3xl mb-4 font-medium tracking-wide ">
+        <h3 className="text-4xl mb-4 font-medium tracking-wide ">
           BRINGING YOU THE <span className="text-[#D87D4A]">BEST</span> AUDIO
           GEAR
         </h3>
-        <p className="mb-4 text-xs ">
+        <p className="mb-4 text-xl ">
           Located at the heart of New York City, Audiophile is the premier store
           for high end headphones, earphones, speakers, and audio accessories.
           We have a large showroom and luxury demonstration rooms available for
