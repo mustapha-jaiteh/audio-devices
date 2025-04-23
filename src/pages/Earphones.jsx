@@ -25,7 +25,7 @@ const Earphones = () => {
       </header>
       <main className="h-full w-screen flex flex-col py-20">
         {/* Wireless Earphone */}
-        <div className="headphone-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  my-auto lg:mb-16  mx-8 lg:gap-4 items-center  justify-center h-[700px] lg:h-[400px] lg:mx-28 rounded-md ">
+        <div className="headphone-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  my-auto lg:mb-16  mx-8 lg:gap-4 items-center  justify-center  lg:mx-28 rounded-md ">
           {data
             .filter((item) => item.id === 1)
             .map((earphone) => {
@@ -41,13 +41,13 @@ const Earphones = () => {
                   </div>
                   {/* earphone description */}
                   <div className=" w-full h-full rounded-sm p-4 pl-12 flex flex-col justify-center items-center lg:items-start text-center lg:text-left lg:top-48 lg:left-32 text-gray-950 ">
-                    <h5 className=" text-[12px] text-[#D87D4A] tracking-widest mb-4 ">
+                    <h5 className=" text-[20px] text-[#D87D4A] tracking-widest mb-4 ">
                       NEW PRODUCT
                     </h5>
-                    <h3 className="text-3xl mb-4 font-bold tracking-wide ">
+                    <h3 className="text-4xl mb-4 font-bold tracking-wide ">
                       {earphone.name}
                     </h3>
-                    <p className="mb-4 text-sm">{earphone.description}</p>
+                    <p className="mb-4 text-xl">{earphone.description}</p>
                     <Link to={`/earphones/${earphone.id}`}>
                       <button className="bg-[#D87D4A] hover:bg-[#FBAF85] text-white font-bold p-2 rounded mt-4 left-0 w-32">
                         See Product

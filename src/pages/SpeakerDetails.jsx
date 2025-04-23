@@ -36,7 +36,7 @@ const SpeakerDetails = () => {
           </Link>
         </div>
         {/*  speakers */}
-        <div className="speaker-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  my-auto lg:mb-16  mx-8 lg:gap-4 items-center  justify-center h-[700px] lg:h-[400px] lg:mx-28 rounded-md ">
+        <div className="speaker-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  my-auto lg:mb-16  mx-8 lg:gap-4 items-center  justify-center  lg:mx-28 rounded-md ">
           {/*  speaker image */}
           <div className=" h-full w-full ">
             <picture>
@@ -56,14 +56,14 @@ const SpeakerDetails = () => {
             </picture>
           </div>
           {/* speaker description */}
-          <div className=" w-full h-full rounded-sm p-4 pl-12 flex flex-col items-start text-left lg:top-48 lg:left-32 text-gray-950 ">
-            <h5 className=" text-[12px] text-[#D87D4A] tracking-widest mb-4 ">
+          <div className=" w-full h-full rounded-sm p-4 pl-12 flex flex-col justify-center items-center lg:items-start text-center lg:text-left lg:top-48 lg:left-32 text-gray-950 ">
+            <h5 className=" text-[20px] text-[#D87D4A] tracking-widest mb-4 ">
               NEW PRODUCT
             </h5>
-            <h3 className="text-3xl mb-4 font-bold tracking-wide ">
+            <h3 className="text-4xl mb-4 font-bold tracking-wide ">
               {speaker.name}
             </h3>
-            <p className="mb-4 text-sm">{speaker.description}</p>
+            <p className="mb-4 text-xl">{speaker.description}</p>
             <p className="price font-bold">{`$${speaker.price}`}</p>
             <div className="flex justify-center items-center gap-4">
               <button className="bg-gray-300 hover:bg-gray-400 text-black text-sm font-bold p-2 rounded-sm mt-4 left-0 w-24 cursor-pointer ">
@@ -83,17 +83,17 @@ const SpeakerDetails = () => {
         <div className="features grid grid-cols-1 md:grid-cols-10 lg:grid-cols-10 my-auto  mx-8 lg:gap-4 items-start text-left  lg:h-[400px] lg:mx-28 rounded-md p-6">
           {/* features data */}
           <div className=" h-full w-full lg:col-span-6  ">
-            <h1 className="text-3xl font-bold tracking-wide mb-4 ">Features</h1>
-            <p className="text-sm">{speaker.features}</p>
+            <h1 className="text-4xl font-bold tracking-wide mb-4 ">Features</h1>
+            <p className="text-xl">{speaker.features}</p>
           </div>
           {/* IN TEH BOX */}
           <div className=" w-full h-full rounded-sm p-4 pl-12 flex flex-col   text-gray-950 lg:col-span-4 items-start text-left ">
-            <h3 className="text-3xl mb-4 font-bold tracking-wide ">
+            <h3 className="text-4xl mb-4 font-bold tracking-wide ">
               IN THE BOX
             </h3>
             <ul>
               {speaker.includes.map((box, index) => (
-                <li className="mb-4 text-sm flex gap-3 " key={index}>
+                <li className="mb-4 text-xl flex gap-3 " key={index}>
                   <p className=" font-bold text-[#D87D4A]">{`${box.quantity}x`}</p>
                   {box.item}
                 </li>
